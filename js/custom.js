@@ -19,24 +19,30 @@ $(document).ready(function()
 
 	*/
 
+	//Stop transitions on page load
+	$(window).on('load', function()
+	{
+  		$("body").removeClass("preload");
+	});
+
 	var spells = {
 		"Flash of Light":[
-			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '1', min: 67, max: 77, mana: 35, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
-			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '2', min: 102, max: 117, mana: 50, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
-			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '3', min: 153, max: 171, mana: 70, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
-			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '4', min: 206, max: 231, mana: 90, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
-			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '5', min: 278, max: 310, mana: 115, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
-			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '6', min: 348, max: 389, mana: 140, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"}
+			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'0.4285', rank: '1', min: 67, max: 77, mana: 35, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
+			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'0.4285', rank: '2', min: 102, max: 117, mana: 50, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
+			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'0.4285', rank: '3', min: 153, max: 171, mana: 70, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
+			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'0.4285', rank: '4', min: 206, max: 231, mana: 90, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
+			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'0.4285', rank: '5', min: 278, max: 310, mana: 115, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
+			{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'0.4285', rank: '6', min: 348, max: 389, mana: 140, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"}
 		],
 		"Holy Light":[
-			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '1', min: 42, max: 51, mana: 35, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
-			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '2', min: 81, max: 96, mana: 60, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
-			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '3', min: 167, max: 196, mana: 110, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
-			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '4', min: 322, max: 368, mana: 190, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
-			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '5', min: 506, max: 569, mana: 275, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
-			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '6', min: 717, max: 799, mana: 365, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
-			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '7', min: 968, max: 1076, mana: 465, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
-			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '8', min: 1272, max: 1414, mana: 580, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"}
+			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'0.71', rank: '1', min: 42, max: 51, mana: 35, cast: 2.5, pic: "hl.png", learned: 1, link: "https://classic.wowhead.com/spell=635/holy-light"},
+			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'0.71', rank: '2', min: 81, max: 96, mana: 60, cast: 2.5, pic: "hl.png", learned: 6, link: "https://classic.wowhead.com/spell=635/holy-light"},
+			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'0.71', rank: '3', min: 167, max: 196, mana: 110, cast: 2.5, pic: "hl.png", learned: 14, link: "https://classic.wowhead.com/spell=635/holy-light"},
+			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'0.71', rank: '4', min: 322, max: 368, mana: 190, cast: 2.5, pic: "hl.png", learned: 22, link: "https://classic.wowhead.com/spell=635/holy-light"},
+			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'0.71', rank: '5', min: 506, max: 569, mana: 275, cast: 2.5, pic: "hl.png", learned: 30, link: "https://classic.wowhead.com/spell=635/holy-light"},
+			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'0.71', rank: '6', min: 717, max: 799, mana: 365, cast: 2.5, pic: "hl.png", learned: 38, link: "https://classic.wowhead.com/spell=635/holy-light"},
+			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'0.71', rank: '7', min: 968, max: 1076, mana: 465, cast: 2.5, pic: "hl.png", learned: 46, link: "https://classic.wowhead.com/spell=635/holy-light"},
+			{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'0.71', rank: '8', min: 1272, max: 1414, mana: 580, cast: 2.5, pic: "hl.png", learned: 54, link: "https://classic.wowhead.com/spell=635/holy-light"}
 		],
 		"Lesser Heal":[
 			{class: 'Priest', name: 'Lesser Heal', id: 'lh', coef: '71.42', rank: '1', min: 47, max: 58, mana: 30, cast: 1.5, pic: "lh.png", link: "https://classic.wowhead.com/spell=2050/lesser-heal"},
@@ -45,33 +51,54 @@ $(document).ready(function()
 		]
 	};
 
-	var btn = $('.apply_button');
-	var selectedClass = "";
-	var bonusHealingValue;
-	var healingLightRank = 0;
-	var crit;
-	var totalMana;
-	var selected;
+	// var spells = {
+	// 	"paladin":[
+	// 		{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '1', min: 67, max: 77, mana: 35, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
+	// 		{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '2', min: 102, max: 117, mana: 50, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
+	// 		{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '3', min: 153, max: 171, mana: 70, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
+	// 		{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '4', min: 206, max: 231, mana: 90, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
+	// 		{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '5', min: 278, max: 310, mana: 115, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
+	// 		{class: 'Paladin', name: 'Flash of Light', id:'fol', coef:'42.85', rank: '6', min: 348, max: 389, mana: 140, cast: 1.5, pic: "fol.png", link: "https://classic.wowhead.com/spell=19750/flash-of-light"},
+	// 		{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '1', min: 42, max: 51, mana: 35, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
+	// 		{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '2', min: 81, max: 96, mana: 60, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
+	// 		{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '3', min: 167, max: 196, mana: 110, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
+	// 		{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '4', min: 322, max: 368, mana: 190, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
+	// 		{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '5', min: 506, max: 569, mana: 275, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
+	// 		{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '6', min: 717, max: 799, mana: 365, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
+	// 		{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '7', min: 968, max: 1076, mana: 465, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"},
+	// 		{class: 'Paladin', name: 'Holy Light', id:'hl', coef:'71', rank: '8', min: 1272, max: 1414, mana: 580, cast: 2.5, pic: "hl.png", link: "https://classic.wowhead.com/spell=635/holy-light"}
+	// 	],
+	// 	"priest":[
+	// 		{class: 'Priest', name: 'Lesser Heal', id: 'lh', coef: '71.42', rank: '1', min: 47, max: 58, mana: 30, cast: 1.5, pic: "lh.png", link: "https://classic.wowhead.com/spell=2050/lesser-heal"},
+	// 		{class: 'Priest', name: 'Lesser Heal', id: 'lh', coef: '71.42', rank: '2', min: 76, max: 91, mana: 45, cast: 2, pic: "lh.png", link: "https://classic.wowhead.com/spell=2050/lesser-heal"},
+	// 		{class: 'Priest', name: 'Lesser Heal', id: 'lh', coef: '71.42', rank: '3', min: 143, max: 165, mana: 75, cast: 1.5, pic: "lh.png", link: "https://classic.wowhead.com/spell=2050/lesser-heal"}
+	// 	]
+	// };
+
+	var classButton = $('.class_button');
+	var selectedClass;
+	var bonusHealingValue = 500;
+	var healingLightRank = 3;
+	var crit = 15;
+	var totalMana = 5000;
+	var tables = $('#tables');
+	var classSettings = $('#class_container');
+	var btn;
 	var back = $('.back');
-	initClassSelectNavigation();
+
+	initHome();
+	initClassSelection();
 	initBack();
-	handleButtonClicks();
-	initAccordions();
 
-	btn.on('click', function()
-	{
-		clearAll();
-		createTables(selectedClass);
-	});
-
-	// Class Select Navigation
-	function initClassSelectNavigation()
+	//Handle home page navigation
+	function initHome()
 	{
 		var navItems = $('.nav_container ul li');
 		var picsContainer = $('.class_pic_container');
 		var infoContainer = $('.class_info_container');
 		var classPics = $('.class_pic');
 		var classInfos = $('.class_info');
+
 		navItems.on('click', function(e)
 		{
 			var item = e.target;
@@ -91,46 +118,35 @@ $(document).ready(function()
 		});
 	}
 
-	// Init Class
-	function handleButtonClicks()
+	//Handle class selection
+	function initClassSelection()
 	{
 		var buttons = $('.class_button');
 		buttons.on('click', function(e)
 		{
 			var button = e.target;
-			selectedClass = $(button).data('class');
+			selectedClass = $(e.target).data('class');
 			var selectedTitle = $(button).data('title');
-			initHeader(selectedClass, selectedTitle);
 			$('.class_selection').css({'pointer-events': 'none', 'opacity': '0', 'visibility': 'hidden'});
 			$('.'+selectedClass).css({'max-height': 'none', 'visibility': 'visible', 'opacity': '1', "transition-delay": "500ms", "-webkit-transition-delay": "500ms"});
-			clearAll();
-			if(selectedClass === "paladin")
+			$('.header_class').text(selectedTitle);
+			$('.header').addClass('active');
+			var classStructure = getClassStructure();
+			$('.class_container').append(classStructure);
+			initAccordions();
+			initSettingsButton();
+			initClassTables();
+			btn = $('.apply_button');
+			btn.on('click', function()
 			{
-				bonusHealingValue = $('#bonus_healing_paladin').val();
-				healingLightRank = $('#healing_light').val();
-				crit = $('#crit_paladin').val();
-				totalMana = $('#mana_paladin').val();
-				createTables(selectedClass);
-			}
-			if(selectedClass === "priest")
-			{
-				bonusHealingValue = $('#bonus_healing_priest').val();
-			}
-			if(selectedClass === "druid")
-			{
-				bonusHealingValue = $('#bonus_healing_druid').val();
-			}
-			if(selectedClass === "shaman")
-			{
-				bonusHealingValue = $('#bonus_healing_shaman').val();
-			}
+				clearTables();
+				initClassTables(selectedClass);
+			});
 		});
 	}
 
-	function createTables(selectedClass)
+	function initClassTables()
 	{
-		clearAll();
-		var tables = $('#tables');
 		var x = 0;
 
 		for(var spell_name in spells)
@@ -145,8 +161,6 @@ $(document).ready(function()
 
 	function createTable(spell_name, x)
 	{
-		var tables = $('#tables');
-		
 		//Insert spell title
 		var spellPic = spells[spell_name][0].pic;
 
@@ -155,29 +169,29 @@ $(document).ready(function()
 		var spellName = spell[x].id;
 		var cls = spell[x].class;
 		var link = spell[0].link;
-		bonusHealingValue = $('#bonus_healing_paladin').val();
+		bonusHealingValue = $('#bonus_healing').val();
 		healingLightRank = $('#healing_light').val();
-		crit = $('#crit_paladin').val();
-		totalMana = $('#mana_paladin').val();
+		crit = $('#crit').val();
+		totalMana = $('#mana').val();
 		var table = 
 		'<div class="table_container">'+
-			'<div class="table_title d-flex flex-row align-items-center justify-content-start"><img src="images/'+ spellPic +'" alt=""><h2>'+ spell_name +'</h2>'+ '<div>Actual Healing Power: '+ Math.round((bonusHealingValue * spells[spell_name][0].coef) / 100) + ' (Spell Coefficient: ' + spells[spell_name][0].coef + ')</div><a href="'+ link +'">'+ spell_name +' - wowhead</a></div>'+
+			'<div class="table_title d-flex flex-row align-items-center justify-content-start"><img src="images/'+ spellPic +'" alt=""><h2>'+ spell_name +'</h2>'+ '<div>Actual Healing Power: '+ Math.round((bonusHealingValue * spells[spell_name][0].coef)) + ' (Spell Coefficient: ' + spells[spell_name][0].coef + ')</div><a href="'+ link +'">'+ spell_name +' - wowhead</a></div>'+
 			'<div class="' + spellName + ' d-flex flex-column">'+
 				'<div class="table_headers_row d-flex flex-row align-items-center justify-content-center">'+
-					'<div class="rank">Rank</div>'+
-					'<div class="healing_range">Heal Range</div>'+
-					'<div class="mana_cost">Mana</div>'+
-					'<div class="cast_time">Cast Time</div>'+
-					'<div class="avg_heal_base">Avg. Heal</div>'+
-					'<div class="avg_heal_bonus">Avg. Heal*</div>'+
-					'<div class="heal_per_mana_base">Heal / Mana</div>'+
-					'<div class="heal_per_mana_bonus">Heal / Mana*</div>'+
-					'<div class="hps_base">HPS</div>'+
-					'<div class="hps_bonus_crit">HPS*</div>'+
-					'<div class="casts_base">Oom in</div>'+
-					'<div class="casts_bonus">Oom in*</div>'+
-					'<div class="time_oom">Oom in</div>'+
-					'<div class="time_oom_crit">Oom in*</div>'+
+					'<div class="rank_title title_row">Rank</div>'+
+					'<div class="healing_range_title">Heal Range</div>'+
+					'<div class="mana_cost_title">Mana</div>'+
+					'<div class="cast_time_title">Cast Time</div>'+
+					'<div class="avg_heal_base_title">Avg. Heal</div>'+
+					'<div class="avg_heal_bonus_title title_row">Avg. Heal*</div>'+
+					'<div class="heal_per_mana_base_title">Heal / Mana</div>'+
+					'<div class="heal_per_mana_bonus_title title_row">Heal / Mana*</div>'+
+					'<div class="hps_base_title">HPS</div>'+
+					'<div class="hps_bonus_crit_title title_row">HPS*</div>'+
+					'<div class="casts_base_title">Oom in</div>'+
+					'<div class="casts_bonus_title title_row">Oom in*</div>'+
+					'<div class="time_oom_title">Oom in</div>'+
+					'<div class="time_oom_crit_title title_row">Oom in*</div>'+
 				'</div>'+
 			'</div>'+
 		'</div>';
@@ -191,16 +205,29 @@ $(document).ready(function()
 			//Vars
 			var min = spell[c].min;
 			var max = spell[c].max;
+			var coef;
+
 			if(selectedClass === "paladin")
 			{
 				min = Math.round(((min*(healingLightRank*4))/100)+min);
 				max = Math.round(((max*(healingLightRank*4))/100)+max);
+				coef = spell[c].coef;
+
+				if(spell_name === "Holy Light")
+				{
+					var levelLearned = spell[c].learned;
+					if(levelLearned < 20)
+					{
+						coef = coef * (1 - ((20 - levelLearned) * 0.0375));
+						console.log(levelLearned + " " + coef);
+					}
+				}
 			}
 			var avgHeal = (min+max) / 2;
 			var mana = spell[c].mana;
-			var coef = spell[c].coef;
+			
 			var castTime = spell[c].cast;
-			var bonus = Math.round((bonusHealingValue * coef) / 100);
+			var bonus = Math.round(bonusHealingValue * coef);
 
 			var spellRankRow = 
 			'<div class="spell_rank d-flex flex-row align-items-center justify-content-center">'+
@@ -239,17 +266,87 @@ $(document).ready(function()
 		return result;
 	}
 
-	function clearAll()
+	//HTML structure for stats and talents
+	function getClassStructure()
 	{
-		var tables = $('#tables');
-		tables.children().remove();
+		var returnValue = "";
+
+		returnValue = 
+		'<div class="accordion_container">'+
+			'<div class="accordion d-flex flex-row align-items-center"><div>Stats & Talents</div></div>'+
+			'<div class="accordion_panel">'+
+				'<div class="class_settings">'+
+					'<div class="class_settings_inner">'+
+						'<div class="stats_container">'+
+							'<div class="section_title">Stats</div>'+
+							'<div class="stats d-flex flex-row align-items-center justify-content-between">'+
+								'<div class="stat stat_hp d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="stat_title">Healing Power</div>'+
+									'<div class="stat_value ml-auto">'+
+										'<input id="bonus_healing" type="text" class="stat_input" value="500">'+
+									'</div>'+
+								'</div>'+
+								'<div class="stat stat_crit d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="stat_title">Crit Chance (%)</div>'+
+									'<div class="stat_value ml-auto">'+
+										'<input id="crit" type="text" class="stat_input" value="15">'+
+									'</div>'+
+								'</div>'+
+								'<div class="stat stat_mana d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="stat_title">Mana</div>'+
+									'<div class="stat_value ml-auto">'+
+										'<input id="mana" type="text" class="stat_input" value="5000">'+
+									'</div>'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+						getClassTalents() +
+					'</div>'+
+					'<div class="class_settings_button d-flex flex-row">'+
+						'<div class="button_a apply_button d-flex flex-row align-items-center justify-content-center ml-auto"><span>apply</span></div>'+
+					'</div>'+
+				'</div>'+
+			'</div>'+
+		'</div>';
+
+		return returnValue;
 	}
 
-	// Init Header
-	function initHeader(selectedClass, selectedTitle)
+	function getClassTalents()
 	{
-		$('.header_class').text(selectedTitle);
-		$('.header').addClass('active');
+		var returnValue = "";
+
+		switch(selectedClass)
+		{
+			case 'paladin':
+				returnValue = 
+					'<div class="talents_container">'+
+						'<div class="section_title">Talents</div>'+
+						'<div class="talents d-flex align-items-center justify-content-between">'+
+							'<div class="talent d-flex flex-row align-items-center justify-content-start">'+
+								'<div class="talent_pic"><img src="images/healing_light.png" alt=""></div>'+
+								'<div class="talent_title">Healing Light</div>'+
+								'<div class="talent_value ml-auto">'+
+									'<input id="healing_light" type="text" class="talent_input" value="3" min="0" max="3">'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+					'</div>';
+			break;
+		}
+
+		return returnValue;
+	}
+
+	function clearAll()
+	{
+		tables.children().remove();
+		classSettings.children().remove();
+	}
+
+	function clearTables()
+	{
+		tables.children().remove();
 	}
 
 	// Back button
@@ -273,12 +370,6 @@ $(document).ready(function()
 			$('.header_class').text("");
 		},800);
 	}
-
-	/* 
-
-	4. Init Accordions
-
-	*/
 
 	function initAccordions()
 	{
@@ -340,6 +431,15 @@ $(document).ready(function()
 				});
 			});
 		}
+	}
+
+	function initSettingsButton()
+	{
+		var btn = $('.class_settings_button');
+		btn.on('click', function()
+		{
+
+		});
 	}
 
 });
