@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>HealCraft</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="HealCraft project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+<body class="preload">
+
+<div class="super_container">
+	
+	<!-- Home -->
+	<div class="home">
+		<div class="home_background">
+			<div class="background_image" style="background-image:url(images/healcraft_home.jpg)"></div>
+		</div>
+
+		<!-- Header -->
+		<header class="header">
+			<div class="header_container d-flex flex-row align-items-center justify-content-start">
+				<div class="header_logo"><img src="images/healcraft_logo_small.png" alt=""></div>
+				<div class="header_class"></div>
+				<div class="back d-flex flex-column align-items-center justify-content-between ml-auto"><div></div><div></div><div></div></div>
+			</div>
+		</header>
+
+		<!-- Class Selection -->
+		<div class="class_selection">
+			<div class="content_container d-flex flex-row align-items-start justify-content-start">
+
+				<!-- Navigation -->
+				<nav class="main_navigation d-flex flex-column align-items-center justify-content-start">
+
+					<!-- Logo -->
+					<div class="logo"><img src="images/healcraft_logo_large.png" alt=""></div>
+
+					<!-- Nav -->
+					<div class="nav_container">
+						<ul class="d-flex flex-column align-items-center justify-content-center">
+							<li class="active">paladin</li>
+							<li>priest</li>
+							<li>druid</li>
+							<li>shaman</li>
+						</ul>
+					</div>
+
+					<!-- Links -->
+					<div class="home_links d-flex flex-row mt-auto">
+						<div><a href="https://www.icy-veins.com">icyveins</a></div>
+						<div><a href="https://classic.wowhead.com/">wowhead</a></div>
+					</div>
+
+				</nav>
+
+				<!-- Class Pic -->
+				<div class="class_pic_container d-flex flex-column align-items-center justify-content-center loaded">
+					<div class="class_pic d-flex flex-column align-items-center justify-content-center active"><img src="images/paladin.png" alt=""></div>
+					<div class="class_pic d-flex flex-column align-items-center justify-content-center"><img src="images/priest.png" alt=""></div>
+					<div class="class_pic d-flex flex-column align-items-center justify-content-center"><img src="images/druid.png" alt=""></div>
+					<div class="class_pic d-flex flex-column align-items-center justify-content-center"><img src="images/shaman.png" alt=""></div>
+				</div>
+
+				<!-- Class Info -->
+				<div class="class_info_container d-flex flex-column align-items-center justify-content-center loaded">
+					<div class="class_info class_info_paladin active">
+						<h1>Holy Paladin</h1>
+						<div class="class_info_links">
+							<a href="#">Guides</a>
+						</div>
+						<div class="class_info_desc">
+							<p>Paladins are an Alliance exclusive class, opposite Horde Shamans, which can fill any role and bring a large assortment of support abilities. They are the quintessential support class, enhancing their allies while fighting alongside them.</p>
+						</div>
+						<div class="button_a class_button d-flex flex-row align-items-center justify-content-center" data-class="paladin" data-title="Holy Paladin"><span>healing tables</span></div>
+					</div>
+					<div class="class_info class_info_paladin">
+						<h1>Priest</h1>
+						<div class="class_info_links">
+							<a href="#">Guides</a>
+						</div>
+						<div class="class_info_desc">
+							<p>The Priest is an iconic class in World of Warcraft, as either a robust healer harnessing the Light to grant them immense holy power, or acting as a conduit of shadow magic to inflict pain and twist the minds of their enemies. As a healer, the Priest has a robust set of abilities which allow them to support their allies, but at a cost. Unlike more durable Druids, Shamans and Paladins, Priests wear cloth armor, offering them little protection from physical attacks.</p>
+						</div>
+						<div class="button_a class_button d-flex flex-row align-items-center justify-content-center" data-class="priest" data-title="Priest"><span>healing tables</span></div>
+					</div>
+					<div class="class_info class_info_paladin">
+						<h1>Druid</h1>
+						<div class="class_info_links">
+							<a href="#">Guides</a>
+						</div>
+						<div class="class_info_desc">
+							<p>The druid is a formidable class with good healing ability, potent offensive spells, excellent buffs, and the unique ability to shapeshift into different animal types. In its animal forms, the druid can adopt new roles, such as that of a warrior or rogue, giving it great versatility.</p>
+						</div>
+						<div class="button_a class_button d-flex flex-row align-items-center justify-content-center" data-class="druid"  data-title="Druid"><span>healing tables</span></div>
+					</div>
+					<div class="class_info class_info_paladin">
+						<h1>Shaman</h1>
+						<div class="class_info_links">
+							<a href="#">Guides</a>
+						</div>
+						<div class="class_info_desc">
+							<p>Shamans are the spiritual advisors of the Horde. The shaman is a versatile and flexible class that fulfills many roles in an adventuring party. While other classes are pure fighters or spellcasters, the shaman enjoys a happy medium in-between. The shaman is an effective spellcaster, but can also fight extremely well with mace and staff.</p>
+						</div>
+						<div class="button_a class_button d-flex flex-row align-items-center justify-content-center" data-class="shaman" data-title="Shaman"><span>healing tables</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Classes -->
+		<div class="paladin player_class">
+			<div class="container container_1600">
+				<div class="row">
+					<div class="col">
+						<div class="class_container" id="class_container"></div>
+
+						<!-- Tables -->
+						<div class="tables" id="tables"></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="styles/bootstrap-4.1.2/popper.js"></script>
+<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
