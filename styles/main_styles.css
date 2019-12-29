@@ -42,13 +42,6 @@ body
 	background: #FFFFFF;
 	color: #a5a5a5;
 }
-.preload *
-{
-	-webkit-transition: none !important;
-	-moz-transition: none !important;
-	-ms-transition: none !important;
-	-o-transition: none !important;
-}
 div
 {
 	display: block;
