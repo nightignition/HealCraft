@@ -688,17 +688,19 @@ section
 .stats,
 .talents
 {
+	width: calc(100% + 20px);
 	margin-top: 22px;
 }
 .stat,
 .talent
 {
-	width: calc((100% - 40px) / 3);
+	width: calc((100% - 60px) / 3);
 	height: 75px;
 	background: #030406;
 	border: solid 1px #504137;
 	padding-left: 20px;
 	padding-right: 26px;
+	margin-bottom: 20px;
 }
 .stat_title,
 .talent_title
@@ -730,7 +732,7 @@ section
 }
 .talents_container
 {
-	margin-top: 34px;
+	margin-top: 14px;
 }
 .talent_pic
 {
@@ -741,6 +743,11 @@ section
 .talent_pic img
 {
 	max-width: 100%;
+}
+.talents > div:not(:last-of-type),
+.stats > div:not(:last-of-type)
+{
+	margin-right: 20px;
 }
 .class_settings_button .button_a
 {
