@@ -418,7 +418,7 @@ $(document).ready(function()
 
 		returnValue = 
 		'<div class="accordion_container">'+
-			'<div class="accordion d-flex flex-row align-items-center"><div>Stats & Talents</div></div>'+
+			'<div class="accordion d-flex flex-row align-items-center active"><div>Stats & Talents</div></div>'+
 			'<div class="accordion_panel">'+
 				'<div class="class_settings">'+
 					'<div class="class_settings_inner">'+
