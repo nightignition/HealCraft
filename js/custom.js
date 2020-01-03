@@ -223,6 +223,7 @@ $(document).ready(function()
 
 		//Insert spell ranks info
 		var c;
+		var hasSub20 = false;
 		for(c = 0; c < spell.length; c++)
 		{
 			//Vars
@@ -313,6 +314,7 @@ $(document).ready(function()
 
 			var coef = castTime / 3.5;
 
+			// Fix for PoH coef
 			if(spell_name === "Prayer of Healing")
 			{
 				coef = castTime / 3.5 / 3;
@@ -322,6 +324,7 @@ $(document).ready(function()
 			if(levelLearned < 20)
 			{
 				coef = coef * (1 - ((20 - levelLearned) * 0.0375));
+				hasSub20 = true;
 			}
 			
 			if(castTime === "Instant")
@@ -347,7 +350,7 @@ $(document).ready(function()
 				'<div class="healing_range">'+ (min + bonus) + '-' + (max + bonus) +'</div>'+
 				'<div class="mana_cost">'+ mana +'</div>'+
 				'<div class="cast_time">'+ castTitle +'</div>'+
-				'<div class="avg_heal_bonus">'+ Math.round(avgHeal + bonus) +'</div>'+
+				'<div class="avg_heal_bonus">'+ Math.round(avgHeal + bonus) + getSub20Status(levelLearned) + '</div>'+
 				'<div class="heal_per_mana_bonus">'+ ((avgHeal + bonus) / mana).toFixed(1) +'</div>'+
 				'<div class="hps_bonus">'+ Math.round((avgHeal + bonus) / castTime) +'</div>'+
 				'<div class="hps_bonus_crit">'+ Math.round(((((100-crit)*(avgHeal + bonus))+(crit*((avgHeal + bonus)*1.5)))/100)/castTime) +'</div>'+
@@ -356,6 +359,23 @@ $(document).ready(function()
 
 			$('.'+spellName).append(spellRankRow);
 		}
+
+		// If spell has ranks that are learned before level 20 add explanation under the table
+		if(hasSub20)
+		{
+			var txt = '<div class="sub20">*Casting a spell that is below level 20 incurs a significant penalty to the coefficient of the spell. The formula for this is: (1 - ((20 - spell_level) * 0.0375)) = spell coefficient</div>';
+			tables.append(txt);
+		}
+	}
+
+	function getSub20Status(levelLearned)
+	{
+		var returnValue = "";
+		if(levelLearned < 20)
+		{
+			returnValue = "*";
+		}
+		return returnValue;
 	}
 
 	function getOomTitleRow()
@@ -466,8 +486,10 @@ $(document).ready(function()
 						'<div class="section_title">Talents</div>'+
 						'<div class="talents d-flex align-items-center justify-content-between">'+
 							'<div class="talent d-flex flex-row align-items-center justify-content-start">'+
-								'<div class="talent_pic"><img src="images/healing_light.png" alt=""></div>'+
-								'<div class="talent_title">Healing Light</div>'+
+								'<div class="healing_light talent_hover d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="talent_pic"><img src="images/healing_light.png" alt=""></div>'+
+									'<div class="talent_title">Healing Light</div>'+
+								'</div>'+
 								'<div class="talent_value ml-auto">'+
 									'<input id="healing_light" type="text" class="talent_input" value="3" min="0" max="3">'+
 								'</div>'+
@@ -483,43 +505,55 @@ $(document).ready(function()
 						'<div class="section_title">Talents</div>'+
 						'<div class="talents d-flex align-items-center justify-content-start flex-wrap">'+
 							'<div class="talent d-flex flex-row align-items-center justify-content-start">'+
-								'<div class="talent_pic"><img src="images/imp_healing.png" alt=""></div>'+
-								'<div class="talent_title">Improved Healing</div>'+
+								'<div class="imp_healing talent_hover d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="talent_pic"><img src="images/imp_healing.png" alt=""></div>'+
+									'<div class="talent_title">Improved Healing</div>'+
+								'</div>'+
 								'<div class="talent_value ml-auto">'+
 									'<input id="improved_healing" type="text" class="talent_input" value="3" min="0" max="3">'+
 								'</div>'+
 							'</div>'+
 							'<div class="talent d-flex flex-row align-items-center justify-content-start">'+
-								'<div class="talent_pic"><img src="images/spiritual_healing.png" alt=""></div>'+
-								'<div class="talent_title">Spiritual Healing</div>'+
+								'<div class="spiritual_healing talent_hover d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="talent_pic"><img src="images/spiritual_healing.png" alt=""></div>'+
+									'<div class="talent_title">Spiritual Healing</div>'+
+								'</div>'+
 								'<div class="talent_value ml-auto">'+
 									'<input id="spiritual_healing" type="text" class="talent_input" value="5" min="0" max="5">'+
 								'</div>'+
 							'</div>'+
 							'<div class="talent d-flex flex-row align-items-center justify-content-start">'+
-								'<div class="talent_pic"><img src="images/rn.png" alt=""></div>'+
-								'<div class="talent_title">Improved Renew</div>'+
+								'<div class="improved_renew talent_hover d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="talent_pic"><img src="images/rn.png" alt=""></div>'+
+									'<div class="talent_title">Improved Renew</div>'+
+								'</div>'+
 								'<div class="talent_value ml-auto">'+
 									'<input id="improved_renew" type="text" class="talent_input" value="0" min="0" max="3">'+
 								'</div>'+
 							'</div>'+
 							'<div class="talent d-flex flex-row align-items-center justify-content-start">'+
-								'<div class="talent_pic"><img src="images/poh.png" alt=""></div>'+
-								'<div class="talent_title">Improved Prayer of Healing</div>'+
+								'<div class="prayer_of_healing talent_hover d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="talent_pic"><img src="images/poh.png" alt=""></div>'+
+									'<div class="talent_title">Improved Prayer of Healing</div>'+
+								'</div>'+
 								'<div class="talent_value ml-auto">'+
 									'<input id="improved_poh" type="text" class="talent_input" value="0" min="0" max="2">'+
 								'</div>'+
 							'</div>'+
 							'<div class="talent d-flex flex-row align-items-center justify-content-start">'+
-								'<div class="talent_pic"><img src="images/pws.png" alt=""></div>'+
-								'<div class="talent_title">Improved Power Word: Shield</div>'+
+								'<div class="power_word_shield talent_hover d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="talent_pic"><img src="images/pws.png" alt=""></div>'+
+									'<div class="talent_title">Improved Power Word: Shield</div>'+
+								'</div>'+
 								'<div class="talent_value ml-auto">'+
 									'<input id="imp_pws" type="text" class="talent_input" value="0" min="0" max="3">'+
 								'</div>'+
 							'</div>'+
 							'<div class="talent d-flex flex-row align-items-center justify-content-start">'+
-								'<div class="talent_pic"><img src="images/ma.png" alt=""></div>'+
-								'<div class="talent_title">Mental Agility</div>'+
+								'<div class="mental_agility talent_hover d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="talent_pic"><img src="images/ma.png" alt=""></div>'+
+									'<div class="talent_title">Mental Agility</div>'+
+								'</div>'+
 								'<div class="talent_value ml-auto">'+
 									'<input id="mental_agility" type="text" class="talent_input" value="5" min="0" max="5">'+
 								'</div>'+

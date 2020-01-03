@@ -749,6 +749,60 @@ section
 {
 	margin-right: 20px;
 }
+.talent_hover::after
+{
+	display: block;
+	position: absolute;
+	bottom: 32px;
+	left: 0;
+	width: 450px;
+	background: #030406;
+	color: #b1997f;
+	font-size: 14px;
+	padding: 10px;
+	border: solid 1px #504137;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.talent_hover:hover::after
+{
+	bottom: 42px;
+	visibility: visible;
+	opacity: 1;
+}
+.healing_light::after
+{
+	content: 'Increases the amount healed by your Holy Light and Flash of Light spells by 4%.';
+}
+.imp_healing::after
+{
+	content: 'Reduces the Mana cost of your Lesser Heal, Heal, and Greater Heal spells by 5%.';
+}
+.spiritual_healing::after
+{
+	content: 'Increases the amount healed by your healing spells by 2%.';
+}
+.improved_renew::after
+{
+	content: 'Increases the amount healed by your Renew spell by 5%.';
+}
+.prayer_of_healing::after
+{
+	content: 'Reduces the Mana cost of your Prayer of Healing spell by 10%.';
+}
+.power_word_shield::after
+{
+	content: 'Increases the damage absorbed by your Power Word: Shield by 5%.';
+}
+.mental_agility::after
+{
+	content: 'Reduces the mana cost of your instant cast spells by 2%.';
+}
 .class_settings_button .button_a
 {
 	width: 134px;
@@ -807,9 +861,9 @@ section
 {
 	opacity: 1;
 }
-.table_container:not(:last-child)
+.table_container:not(:first-child)
 {
-	margin-bottom: 50px;
+	margin-top: 50px;
 }
 .table_container:last-child
 {
@@ -879,6 +933,12 @@ section
 	border-top: solid 1px #332e34;
 	border-bottom: solid 1px #332e34;
 	background: rgba(247, 250, 255, 0.04);
+}
+.sub20
+{
+	font-size: 14px;
+	color: #b1997f;
+	margin-top: 21px;
 }
 /*.spell_rank:hover
 {
