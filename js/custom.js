@@ -210,10 +210,8 @@ $(document).ready(function()
 					'<div class="healing_range_title">Heal Range</div>'+
 					'<div class="mana_cost_title">Mana</div>'+
 					'<div class="cast_time_title">Cast Time</div>'+
-					'<div class="avg_heal_base_title">Avg. Heal</div>'+
-					'<div class="avg_heal_bonus_title title_row">Avg. Heal*</div>'+
-					'<div class="heal_per_mana_base_title">Heal / Mana</div>'+
-					'<div class="heal_per_mana_bonus_title title_row">Heal / Mana*</div>'+
+					'<div class="avg_heal_bonus_title title_row">Avg. Heal</div>'+
+					'<div class="heal_per_mana_bonus_title title_row">Heal / Mana</div>'+
 					'<div class="hps_base_title">HPS</div>'+
 					'<div class="hps_bonus_crit_title title_row">HPS*</div>'+
 					getOomTitleRow() +
@@ -346,12 +344,10 @@ $(document).ready(function()
 			var spellRankRow = 
 			'<div class="spell_rank d-flex flex-row align-items-center justify-content-center">'+
 				'<div class="rank">'+ spell[c].rank +'</div>'+
-				'<div class="healing_range">'+ min + '-' + max +'</div>'+
+				'<div class="healing_range">'+ (min + bonus) + '-' + (max + bonus) +'</div>'+
 				'<div class="mana_cost">'+ mana +'</div>'+
 				'<div class="cast_time">'+ castTitle +'</div>'+
-				'<div class="avg_heal_base">'+ Math.round(avgHeal) +'</div>'+
 				'<div class="avg_heal_bonus">'+ Math.round(avgHeal + bonus) +'</div>'+
-				'<div class="heal_per_mana_base">'+ (avgHeal / mana).toFixed(1) +'</div>'+
 				'<div class="heal_per_mana_bonus">'+ ((avgHeal + bonus) / mana).toFixed(1) +'</div>'+
 				'<div class="hps_bonus">'+ Math.round((avgHeal + bonus) / castTime) +'</div>'+
 				'<div class="hps_bonus_crit">'+ Math.round(((((100-crit)*(avgHeal + bonus))+(crit*((avgHeal + bonus)*1.5)))/100)/castTime) +'</div>'+
@@ -390,7 +386,7 @@ $(document).ready(function()
 				'<div class="casts_base">'+ numCasts + ' casts' + '</div>'+
 				'<div class="casts_bonus">'+ numCastsCrit +' casts' + '</div>'+
 				'<div class="time_oom">'+ getTime(Math.floor(numCasts * castTime)) +'</div>'+
-				'<div class="time_oom_crit">'+ getTime(Math.floor((((totalMana/mana)*crit)/100)+(totalMana/mana))) +'</div>';
+				'<div class="time_oom_crit">'+ getTime(Math.floor(numCastsCrit * castTime)) +'</div>';
 		}
 
 		return returnValue;

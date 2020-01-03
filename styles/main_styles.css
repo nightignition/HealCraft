@@ -725,10 +725,10 @@ section
 	text-align: center;
 	outline: none;
 }
-.stat_input:active,
-.talent_input:active
+.stat_input:focus,
+.talent_input:focus
 {
-	outline: solid 1px red;
+	outline: solid 1px #f8b700;
 }
 .talents_container
 {
@@ -936,14 +936,14 @@ select
 	visibility: visible;
 	opacity: 1;
 }
-.avg_heal_bonus_title::after
+/*.avg_heal_bonus_title::after
 {
 	content: 'Bonus Healing included';
 }
 .heal_per_mana_bonus_title::after
 {
 	content: 'Bonus Healing included';
-}
+}*/
 .hps_bonus_crit_title::after
 {
 	content: 'Crit chance included';
