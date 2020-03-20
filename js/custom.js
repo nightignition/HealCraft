@@ -101,7 +101,33 @@ $(document).ready(function()
 	        {class: 'Priest', name: 'Prayer of Healing', id: 'poh', coef: '0.2857', rank: '3', min: 675, max: 713, mana: 770, cast_value: 3, cast_title: 3, pic: "poh.png", learned: 50, link: "https://classic.wowhead.com/spell=596/prayer-of-healing"},
 	        {class: 'Priest', name: 'Prayer of Healing', id: 'poh', coef: '0.2857', rank: '4', min: 939, max: 991, mana: 1030, cast_value: 3, cast_title: 3, pic: "poh.png", learned: 60, link: "https://classic.wowhead.com/spell=596/prayer-of-healing"}
 	        // {class: 'Priest', name: 'Prayer of Healing', id: 'poh', coef: '0.2857', rank: '5', min: 1041, max: 1099, mana: 1070, cast_value: 3, cast_title: 3, pic: "poh.png", learned: 60, link: "https://classic.wowhead.com/spell=596/prayer-of-healing"}
-	    ]
+	    ],
+	    "Healing Touch":[
+            {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '1', min: 40, max: 55, mana: 25, cast_value: 1.5, cast_title: 1.5, pic: "ht.png", learned: 1, link: "https://classic.wowhead.com/spell=5185/healing-touch"},
+            {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '2', min: 94, max: 119, mana: 55, cast_value: 2.0, cast_title: 2.0, pic: "ht.png", learned: 8, link: "https://classic.wowhead.com/spell=5185/healing-touch"},
+            {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '3', min: 204, max: 253, mana: 110, cast_value: 2.5, cast_title: 2.5, pic: "ht.png", learned: 14, link: "https://classic.wowhead.com/spell=5185/healing-touch"},
+            {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '4', min: 376, max: 459, mana: 185, cast_value: 3.0, cast_title: 3.0, pic: "ht.png", learned: 20, link: "https://classic.wowhead.com/spell=5185/healing-touch"},
+            {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '5', min: 589, max: 712, mana: 270, cast_value: 3.5, cast_title: 3.5, pic: "ht.png", learned: 26, link: "https://classic.wowhead.com/spell=5185/healing-touch"},
+            {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '6', min: 762, max: 914, mana: 335, cast_value: 3.5, cast_title: 3.5, pic: "ht.png", learned: 32, link: "https://classic.wowhead.com/spell=5185/healing-touch"},
+            {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '7', min: 958, max: 1143, mana: 405, cast_value: 3.5, cast_title: 3.5, pic: "ht.png", learned: 38, link: "https://classic.wowhead.com/spell=5185/healing-touch"},
+            {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '8', min: 1225, max: 1453, mana: 495, cast_value: 3.5, cast_title: 3.5, pic: "ht.png", learned: 44, link: "https://classic.wowhead.com/spell=5185/healing-touch"},
+            {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '9', min: 1545, max: 1826, mana: 600, cast_value: 3.5, cast_title: 3.5, pic: "ht.png", learned: 50, link: "https://classic.wowhead.com/spell=5185/healing-touch"},
+            {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '10', min: 1916, max: 2257, mana: 720, cast_value: 3.5, cast_title: 3.5, pic: "ht.png", learned: 56, link: "https://classic.wowhead.com/spell=5185/healing-touch"},
+            {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '11', min: 2267, max: 2677, mana: 800, cast_value: 3.5, cast_title: 3.5, pic: "ht.png", learned: 60, link: "https://classic.wowhead.com/spell=5185/healing-touch"}
+        ],
+        "Rejuvenation":[
+            {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.32', rank: '1', min: 32, max: 32, mana: 25, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 4, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
+            {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.50', rank: '2', min: 56, max: 56, mana: 40, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 10, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
+            {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.68', rank: '3', min: 116, max: 116, mana: 75, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 16, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
+            {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.80', rank: '4', min: 180, max: 180, mana: 105, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 22, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
+            {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.80', rank: '5', min: 244, max: 244, mana: 135, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 28, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
+            {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.80', rank: '6', min: 304, max: 304, mana: 160, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 34, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
+            {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.80', rank: '7', min: 388, max: 388, mana: 195, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 40, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
+            {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.80', rank: '8', min: 488, max: 488, mana: 235, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 46, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
+            {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.80', rank: '9', min: 608, max: 608, mana: 280, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 52, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
+            {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.80', rank: '10', min: 756, max: 756, mana: 335, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 58, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
+            {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.80', rank: '11', min: 888, max: 888, mana: 360, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 60, link: "https://classic.wowhead.com/spell=774/rejuvenation"}
+        ]
 	};
 
 	var classButton = $('.class_button');
@@ -115,9 +141,29 @@ $(document).ready(function()
 	var btn;
 	var back = $('.back');
 
+	setHeader();
 	initHome();
 	initClassSelection();
 	initBack();
+
+	$(document).on('scroll', function()
+	{
+		setHeader();
+	});
+	
+	function setHeader()
+	{
+		var header = $('.header');
+
+		if($(window).scrollTop() > 180)
+		{
+			header.addClass('scrolled');
+		}
+		else
+		{
+			header.removeClass('scrolled');
+		}
+	}
 
 	//Handle home page navigation
 	function initHome()
@@ -201,23 +247,49 @@ $(document).ready(function()
 		healingLightRank = $('#healing_light').val();
 		crit = $('#crit').val();
 		totalMana = $('#mana').val();
-		var table = 
-		'<div class="table_container">'+
-			'<div class="table_title d-flex flex-row align-items-center justify-content-start"><img src="images/'+ spellPic +'" alt=""><h2>'+ spell_name +'</h2>'+ '<div>Actual Healing Power: '+ Math.round((bonusHealingValue * spells[spell_name][0].coef)) + ' (Spell Coefficient: ' + spells[spell_name][0].coef + ')</div><a href="'+ link +'">'+ spell_name +' - wowhead</a></div>'+
-			'<div class="' + spellName + ' d-flex flex-column">'+
-				'<div class="table_headers_row d-flex flex-row align-items-center justify-content-center">'+
-					'<div class="rank_title title_row">Rank</div>'+
-					'<div class="healing_range_title">Heal Range</div>'+
-					'<div class="mana_cost_title">Mana</div>'+
-					'<div class="cast_time_title">Cast Time</div>'+
-					'<div class="avg_heal_bonus_title title_row">Avg. Heal</div>'+
-					'<div class="heal_per_mana_bonus_title title_row">Heal / Mana</div>'+
-					'<div class="hps_base_title">HPS</div>'+
-					'<div class="hps_bonus_crit_title title_row">HPS*</div>'+
-					getOomTitleRow() +
+		var table = "";
+
+		if(spell_name === "Regrowth")
+		{
+			table = 
+			'<div class="table_container">'+
+				'<div class="table_title d-flex flex-row align-items-center justify-content-start"><img src="images/'+ spellPic +'" alt=""><h2>'+ spell_name +'</h2>'+ '<div>Actual Healing Power: '+ Math.round((bonusHealingValue * spells[spell_name][0].coef)) + ' (Spell Coefficient: ' + spells[spell_name][0].coef + ')</div><a href="'+ link +'">'+ spell_name +' - wowhead</a></div>'+
+				'<div class="' + spellName + ' d-flex flex-column">'+
+					'<div class="table_headers_row d-flex flex-row align-items-center justify-content-center">'+
+						'<div class="rank_title title_row">Rank</div>'+
+						'<div class="healing_range_title">Heal Range</div>'+
+						'<div class="healing_range_hot_title">HoT</div>'+
+						'<div class="mana_cost_title">Mana</div>'+
+						'<div class="cast_time_title">Cast Time</div>'+
+						'<div class="avg_heal_bonus_title title_row">Avg. Heal</div>'+
+						'<div class="heal_per_mana_bonus_title title_row">Heal / Mana</div>'+
+						'<div class="hps_base_title">HPS</div>'+
+						'<div class="hps_bonus_crit_title title_row">HPS*</div>'+
+						getOomTitleRow() +
+					'</div>'+
 				'</div>'+
-			'</div>'+
-		'</div>';
+			'</div>';
+		}
+		else
+		{
+			table = 
+			'<div class="table_container">'+
+				'<div class="table_title d-flex flex-row align-items-center justify-content-start"><img src="images/'+ spellPic +'" alt=""><h2>'+ spell_name +'</h2>'+ '<div>Actual Healing Power: '+ Math.round((bonusHealingValue * spells[spell_name][0].coef)) + ' (Spell Coefficient: ' + spells[spell_name][0].coef + ')</div><a href="'+ link +'">'+ spell_name +' - wowhead</a></div>'+
+				'<div class="' + spellName + ' d-flex flex-column">'+
+					'<div class="table_headers_row d-flex flex-row align-items-center justify-content-center">'+
+						'<div class="rank_title title_row">Rank</div>'+
+						'<div class="healing_range_title">Heal Range</div>'+
+						'<div class="mana_cost_title">Mana</div>'+
+						'<div class="cast_time_title">Cast Time</div>'+
+						'<div class="avg_heal_bonus_title title_row">Avg. Heal</div>'+
+						'<div class="heal_per_mana_bonus_title title_row">Heal / Mana</div>'+
+						'<div class="hps_base_title">HPS</div>'+
+						'<div class="hps_bonus_crit_title title_row">HPS*</div>'+
+						getOomTitleRow() +
+					'</div>'+
+				'</div>'+
+			'</div>';
+		}	
 
 		tables.append(table);
 
@@ -232,6 +304,7 @@ $(document).ready(function()
 			var mana = spell[c].mana;
 			// var coef = spell[c].coef;
 			var levelLearned = spell[c].learned;
+			var impHealingTouch = 0;
 
 			//If class is paladin add Talent (Healing Light) 
 			if(selectedClass === "paladin")
@@ -308,6 +381,30 @@ $(document).ready(function()
 				}
 			}
 
+			// Apply druid talents
+			if(selectedClass === "druid")
+			{
+				// Apply Improved Healing Touch talent
+				impHealingTouch = $('#improved_healing_touch').val() * 0.1;
+				var giftOfNature = $('#gift_of_nature').val();
+				var giftOfNatureMin = 0;
+				var giftOfNatureMax = 0;
+
+				if(giftOfNature > 0)
+				{
+					giftOfNatureMin = Math.round((min * (giftOfNature * 2)) / 100);
+					giftOfNatureMax = Math.round((max * (giftOfNature * 2)) / 100);
+					min = min + giftOfNatureMin;
+					max = max + giftOfNatureMax;
+				}
+
+				if(spell_name === "Healing Touch" || spell_name === "Tranquility")
+				{
+					var tranqSpirit = $('#tranquil_spirit').val();
+					mana = Math.round(mana - ((mana * (tranqSpirit * 2)) / 100));
+				}
+			}
+
 			var avgHeal = (min+max) / 2;
 			var castTime = spell[c].cast_value;
 			var castTitle = spell[c].cast_title;
@@ -320,6 +417,22 @@ $(document).ready(function()
 				coef = castTime / 3.5 / 3;
 			}
 
+			// Hybrid spell coef fix (direct heal part)
+			var hcoef = 0.6363;
+			var hot = spell[c].hot;
+			var hotBonus = 0;
+
+			if(spell_name === "Regrowth")
+			{
+				coef = 0.29;
+				hcoef = hcoef * (1 - ((20 - levelLearned) * 0.0375));
+			}
+
+			if(spell_name === "Rejuvenation")
+			{
+				coef = 0.8;
+			}
+
 			// Apply the sub 20 penalty for spells
 			if(levelLearned < 20)
 			{
@@ -327,11 +440,13 @@ $(document).ready(function()
 				hasSub20 = true;
 			}
 			
-			if(castTime === "Instant")
+			// Fix cast time for instant spells for HPS calc
+			if(castTitle === "Instant")
 			{
 				castTime = 15;
 			}
 
+			// Calculate real bonus healing
 			var bonus = Math.round(bonusHealingValue * coef);
 
 			if(spell_name === "Renew")
@@ -344,18 +459,50 @@ $(document).ready(function()
 				bonus = Math.round(bonusHealingValue * 0.1);
 			}
 
-			var spellRankRow = 
-			'<div class="spell_rank d-flex flex-row align-items-center justify-content-center">'+
-				'<div class="rank">'+ spell[c].rank +'</div>'+
-				'<div class="healing_range">'+ (min + bonus) + '-' + (max + bonus) +'</div>'+
-				'<div class="mana_cost">'+ mana +'</div>'+
-				'<div class="cast_time">'+ castTitle +'</div>'+
-				'<div class="avg_heal_bonus">'+ Math.round(avgHeal + bonus) + getSub20Status(levelLearned) + '</div>'+
-				'<div class="heal_per_mana_bonus">'+ ((avgHeal + bonus) / mana).toFixed(1) +'</div>'+
-				'<div class="hps_bonus">'+ Math.round((avgHeal + bonus) / castTime) +'</div>'+
-				'<div class="hps_bonus_crit">'+ Math.round(((((100-crit)*(avgHeal + bonus))+(crit*((avgHeal + bonus)*1.5)))/100)/castTime) +'</div>'+
-				getOomStuff(totalMana, mana, crit, castTime) +
-			'</div>';
+			if(impHealingTouch > 0 && spell_name === "Healing Touch")
+			{
+				castTime = castTime - impHealingTouch;
+				coef = castTime / 3.5;
+			}
+
+			if(spell_name === "Regrowth")
+			{
+				hotBonus = Math.round(bonusHealingValue * hcoef);
+			}
+
+			var spellRankRow = "";
+
+			if(spell_name === "Regrowth")
+			{
+				var spellRankRow = 
+				'<div class="spell_rank d-flex flex-row align-items-center justify-content-center">'+
+					'<div class="rank">'+ spell[c].rank +'</div>'+
+					'<div class="healing_range">'+ (min + bonus) + '-' + (max + bonus) +'</div>'+
+					'<div class="healing_range">'+ (hot + hotBonus) +'</div>'+
+					'<div class="mana_cost">'+ mana +'</div>'+
+					'<div class="cast_time">'+ castTime +'</div>'+
+					'<div class="avg_heal_bonus">'+ Math.round(avgHeal + bonus) + getSub20Status(levelLearned) + '</div>'+
+					'<div class="heal_per_mana_bonus">'+ ((avgHeal + bonus) / mana).toFixed(1) +'</div>'+
+					'<div class="hps_bonus">'+ Math.round((avgHeal + bonus) / castTime) +'</div>'+
+					'<div class="hps_bonus_crit">'+ Math.round(((((100-crit)*(avgHeal + bonus))+(crit*((avgHeal + bonus)*1.5)))/100)/castTime) +'</div>'+
+					getOomStuff(totalMana, mana, crit, castTime) +
+				'</div>';
+			}
+			else
+			{
+				var spellRankRow = 
+				'<div class="spell_rank d-flex flex-row align-items-center justify-content-center">'+
+					'<div class="rank">'+ spell[c].rank +'</div>'+
+					'<div class="healing_range">'+ (min + bonus) + '-' + (max + bonus) +'</div>'+
+					'<div class="mana_cost">'+ mana +'</div>'+
+					'<div class="cast_time">'+ castTime +'</div>'+
+					'<div class="avg_heal_bonus">'+ Math.round(avgHeal + bonus) + getSub20Status(levelLearned) + '</div>'+
+					'<div class="heal_per_mana_bonus">'+ ((avgHeal + bonus) / mana).toFixed(1) +'</div>'+
+					'<div class="hps_bonus">'+ Math.round((avgHeal + bonus) / castTime) +'</div>'+
+					'<div class="hps_bonus_crit">'+ Math.round(((((100-crit)*(avgHeal + bonus))+(crit*((avgHeal + bonus)*1.5)))/100)/castTime) +'</div>'+
+					getOomStuff(totalMana, mana, crit, castTime) +
+				'</div>';
+			}	
 
 			$('.'+spellName).append(spellRankRow);
 		}
@@ -556,6 +703,43 @@ $(document).ready(function()
 								'</div>'+
 								'<div class="talent_value ml-auto">'+
 									'<input id="mental_agility" type="text" class="talent_input" value="5" min="0" max="5">'+
+								'</div>'+
+							'</div>'+
+						'</div>'+
+					'</div>';
+			break;
+
+			// Druid
+			case 'druid':
+				returnValue = 
+					'<div class="talents_container">'+
+						'<div class="section_title">Talents</div>'+
+						'<div class="talents d-flex align-items-center justify-content-start">'+
+							'<div class="talent d-flex flex-row align-items-center justify-content-start">'+
+								'<div class="improved_healing_touch talent_hover d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="talent_pic"><img src="images/ht.png" alt=""></div>'+
+									'<div class="talent_title">Improved Healing Touch</div>'+
+								'</div>'+
+								'<div class="talent_value ml-auto">'+
+									'<input id="improved_healing_touch" type="text" class="talent_input" value="5" min="0" max="5">'+
+								'</div>'+
+							'</div>'+
+							'<div class="talent d-flex flex-row align-items-center justify-content-start">'+
+								'<div class="tranquil_spirit talent_hover d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="talent_pic"><img src="images/ts.png" alt=""></div>'+
+									'<div class="talent_title">Tranquil Spirit</div>'+
+								'</div>'+
+								'<div class="talent_value ml-auto">'+
+									'<input id="tranquil_spirit" type="text" class="talent_input" value="5" min="0" max="5">'+
+								'</div>'+
+							'</div>'+
+							'<div class="talent d-flex flex-row align-items-center justify-content-start">'+
+								'<div class="gift_of_nature talent_hover d-flex flex-row align-items-center justify-content-start">'+
+									'<div class="talent_pic"><img src="images/gon.png" alt=""></div>'+
+									'<div class="talent_title">Gift of Nature</div>'+
+								'</div>'+
+								'<div class="talent_value ml-auto">'+
+									'<input id="gift_of_nature" type="text" class="talent_input" value="5" min="0" max="5">'+
 								'</div>'+
 							'</div>'+
 						'</div>'+
