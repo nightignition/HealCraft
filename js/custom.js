@@ -115,6 +115,17 @@ $(document).ready(function()
             {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '10', min: 1916, max: 2257, mana: 720, cast_value: 3.5, cast_title: 3.5, pic: "ht.png", learned: 56, link: "https://classic.wowhead.com/spell=5185/healing-touch"},
             {class: 'Druid', name: 'Healing Touch', id:'ht', coef:'1.0', rank: '11', min: 2267, max: 2677, mana: 800, cast_value: 3.5, cast_title: 3.5, pic: "ht.png", learned: 60, link: "https://classic.wowhead.com/spell=5185/healing-touch"}
         ],
+		"Regrowth":[
+			{class: 'Druid', name: 'Regrowth', id:'rgw', coef:'0.29', hcoef:'0.63', rank: '1', min: 93, max: 107, hot: 98, mana: 120, cast_value: 2.0, cast_title: 2.0, hdur: 21, pic: "rgw.png", learned: 12, link: "https://classic.wowhead.com/spell=8936/regrowth"},
+            {class: 'Druid', name: 'Regrowth', id:'rgw', coef:'0.29', hcoef:'0.63', rank: '2', min: 176, max: 201, hot: 175, mana: 205, cast_value: 2.0, cast_title: 2.0, hdur: 21, pic: "rgw.png", learned: 18, link: "https://classic.wowhead.com/spell=8936/regrowth"},
+            {class: 'Druid', name: 'Regrowth', id:'rgw', coef:'0.29', hcoef:'0.63', rank: '3', min: 255, max: 290, hot: 259, mana: 280, cast_value: 2.0, cast_title: 2.0, hdur: 21, pic: "rgw.png", learned: 24, link: "https://classic.wowhead.com/spell=8936/regrowth"},
+            {class: 'Druid', name: 'Regrowth', id:'rgw', coef:'0.29', hcoef:'0.63', rank: '4', min: 336, max: 378, hot: 343, mana: 350, cast_value: 2.0, cast_title: 2.0, hdur: 21, pic: "rgw.png", learned: 30, link: "https://classic.wowhead.com/spell=8936/regrowth"},
+            {class: 'Druid', name: 'Regrowth', id:'rgw', coef:'0.29', hcoef:'0.63', rank: '5', min: 425, max: 478, hot: 427, mana: 420, cast_value: 2.0, cast_title: 2.0, hdur: 21, pic: "rgw.png", learned: 36, link: "https://classic.wowhead.com/spell=8936/regrowth"},
+            {class: 'Druid', name: 'Regrowth', id:'rgw', coef:'0.29', hcoef:'0.63', rank: '6', min: 534, max: 599, hot: 546, mana: 510, cast_value: 2.0, cast_title: 2.0, hdur: 21, pic: "rgw.png", learned: 42, link: "https://classic.wowhead.com/spell=8936/regrowth"},
+            {class: 'Druid', name: 'Regrowth', id:'rgw', coef:'0.29', hcoef:'0.63', rank: '7', min: 672, max: 751, hot: 686, mana: 615, cast_value: 2.0, cast_title: 2.0, hdur: 21, pic: "rgw.png", learned: 48, link: "https://classic.wowhead.com/spell=8936/regrowth"},
+            {class: 'Druid', name: 'Regrowth', id:'rgw', coef:'0.29', hcoef:'0.63', rank: '8', min: 839, max: 935, hot: 861, mana: 740, cast_value: 2.0, cast_title: 2.0, hdur: 21, pic: "rgw.png", learned: 54, link: "https://classic.wowhead.com/spell=8936/regrowth"},
+            {class: 'Druid', name: 'Regrowth', id:'rgw', coef:'0.29', hcoef:'0.63', rank: '9', min: 1003, max: 1119, hot: 1064, mana: 880, cast_value: 2.0, cast_title: 2.0, hdur: 21, pic: "rgw.png", learned: 60, link: "https://classic.wowhead.com/spell=8936/regrowth"}
+        ],
         "Rejuvenation":[
             {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.32', rank: '1', min: 32, max: 32, mana: 25, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 4, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
             {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.50', rank: '2', min: 56, max: 56, mana: 40, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 10, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
@@ -127,6 +138,12 @@ $(document).ready(function()
             {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.80', rank: '9', min: 608, max: 608, mana: 280, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 52, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
             {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.80', rank: '10', min: 756, max: 756, mana: 335, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 58, link: "https://classic.wowhead.com/spell=774/rejuvenation"},
             {class: 'Druid', name: 'Rejuvenation', id: 'rej', coef: '0.80', rank: '11', min: 888, max: 888, mana: 360, cast_value: 12, cast_title: 'Instant', pic: "rej.png", learned: 60, link: "https://classic.wowhead.com/spell=774/rejuvenation"}
+        ],
+        "Tranquility":[
+            {class: 'Druid', name: 'Tranquility', id: 'tran', coef: '0.33', rank: '1', min: 490, max: 490, mana: 375, cast_value: 10, cast_title: 10, pic: "tran.png", learned: 30, link: "https://classic.wowhead.com/spell=740/tranquility"},
+            {class: 'Druid', name: 'Tranquility', id: 'tran', coef: '0.33', rank: '2', min: 715, max: 715, mana: 505, cast_value: 10, cast_title: 10, pic: "tran.png", learned: 40, link: "https://classic.wowhead.com/spell=740/tranquility"},
+            {class: 'Druid', name: 'Tranquility', id: 'tran', coef: '0.33', rank: '3', min: 1055, max: 1055, mana: 695, cast_value: 10, cast_title: 10, pic: "tran.png", learned: 50, link: "https://classic.wowhead.com/spell=740/tranquility"},
+            {class: 'Druid', name: 'Tranquility', id: 'tran', coef: '0.33', rank: '4', min: 1470, max: 1740, mana: 925, cast_value: 10, cast_title: 10, pic: "tran.png", learned: 60, link: "https://classic.wowhead.com/spell=740/tranquility"}
         ]
 	};
 
@@ -394,6 +411,7 @@ $(document).ready(function()
 				{
 					giftOfNatureMin = Math.round((min * (giftOfNature * 2)) / 100);
 					giftOfNatureMax = Math.round((max * (giftOfNature * 2)) / 100);
+
 					min = min + giftOfNatureMin;
 					max = max + giftOfNatureMax;
 				}
@@ -591,7 +609,7 @@ $(document).ready(function()
 								'<div class="stat stat_hp d-flex flex-row align-items-center justify-content-start">'+
 									'<div class="stat_title">Healing Power</div>'+
 									'<div class="stat_value ml-auto">'+
-										'<input id="bonus_healing" type="text" class="stat_input" value="500">'+
+										'<input id="bonus_healing" type="text" class="stat_input" value="387">'+
 									'</div>'+
 								'</div>'+
 								'<div class="stat stat_crit d-flex flex-row align-items-center justify-content-start">'+
